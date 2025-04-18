@@ -11,6 +11,14 @@ public class User {
     ArrayList<Playlist> playlists = new ArrayList<>();
     static ArrayList<User> allUsers = new ArrayList<>();
 
+    public User(String username , String password) {
+        this.username = username;
+        this.password = password;
+        this.behavior = new RegularBehavior();
+        allUsers.add(this);
+    }
+
+
     void follow(User user){
         followingList.add(user);
     }
