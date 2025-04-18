@@ -2,9 +2,10 @@ package musicplayer;
 
 public class RegularBehavior implements UserBehavior{
     int playingLimit = 5;
-    @Override
-    public void createPlaylist(String Title, User Owner) {
 
+    @Override
+    public void createPlaylist(String Title, User Owner) throws InvalidOperationException {
+        throw new InvalidOperationException("get premium and create your favourite playlists.");
     }
 
     @Override
