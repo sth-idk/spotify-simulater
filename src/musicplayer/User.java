@@ -23,11 +23,11 @@ public class User {
         followingList.add(user);
     }
 
-    void createPlaylist(String title , User owner){
+    void createPlaylist(String title , User owner) throws InvalidOperationException {
         this.behavior.createPlaylist(title, owner);
     }
 
-    void playMusic(Music music){
+    void playMusic(Music music) throws InvalidOperationException {
         this.behavior.playMusic(music);
     }
 
