@@ -8,4 +8,5 @@ public class User {
     static ArrayList<User> followerList = new ArrayList<>();
     static ArrayList<User> followingList = new ArrayList<>();
     UserBehavior behavior;
+    ArrayList<Playlist> playlists = new ArrayList<>();
 }
