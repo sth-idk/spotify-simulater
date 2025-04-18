@@ -91,6 +91,12 @@ public class Playlist {
         }
         return null;
     }
-        
+
+    public void playPlaylist(Playlist playlist1) throws InvalidOperationException {
+        System.out.println("you are streaming playlist "+"\""+playlist1.title+"\""+" from "+playlist1.owner.username+" right now:");
+        for (Music m : playlist){
+            owner.playMusic(m);
+        }
+    }
     
 }
