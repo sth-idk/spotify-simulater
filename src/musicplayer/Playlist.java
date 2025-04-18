@@ -72,4 +72,25 @@ public class Playlist {
             throw new InvalidOperationException("this password is wrong.");
         }
     }
+
+    Music searchInPlaylist(Music music){
+        boolean toCheck = true;
+        for (Music m : playlist){
+            if (m == music){
+                return m;
+            }
+        }
+        return null;
+    }
+
+    Music searchInPlaylist(String title , User singer){
+        for (Music m : playlist){
+            if (m.title.equalsIgnoreCase(title) && m.singer == singer){
+                return m;
+            }
+        }
+        return null;
+    }
+        
+    
 }
