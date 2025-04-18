@@ -3,42 +3,38 @@ import musicplayer.*;
 public class Main {
     public static void main(String[] args) {
         try {
-            User dude1 = new User("dude 1", "dude123");
-            User dude2 = new User("dude 2", "dude456");
+            User dude = new User("dude", "dude123");
 
 
             User TaylorSwift = new User("Taylor Swift" , "why Should I Know Her Password?");
             Music firstSong = new Music(TaylorSwift , "I Hate It Here");
             Music.allMusics.add(firstSong);
 
+
             User GracieAbrams = new User("Gracie Abrams" , "it's right i don't have taylor's pass but doesn't mean i don't have gracie's.");
-            Music secondSong = new Music(GracieAbrams , "For Real This Time");
+            Music secondSong = new Music(GracieAbrams , "I Told You Things");
             Music.allMusics.add(secondSong);
 
 
 
-            System.out.println("dude1 plays music as regular:");
-            for (int i = 0; i < 5; i++) {
-                dude1.playMusic(firstSong);
-            }
 
-            System.out.println("dude1 buys premium for 2 months:");
-            dude1.buyPremium(dude1, 2);
-
-            System.out.println("dude1 creates a playlist:");
-            dude1.createPlaylist("Things that make me survive", dude1);
+            //dude buys premium for 2 months:
+            dude.buyPremium(dude, 2);
 
 
-            Playlist myPlaylist = dude1.playlists.get(0);
-            myPlaylist.addMusic("dude123", firstSong);
-            myPlaylist.addMusic("dude123", secondSong);
+            //dude creates a playlist:
+            dude.createPlaylist("Things that make me survive this life", dude);
+
+            Playlist dudePlaylist = dude.playlists.get(0);
+            dudePlaylist.addMusic("dude123", firstSong);
+            dudePlaylist.addMusic("dude123", secondSong);
 
 
-            System.out.println("dude1 plays music as premium:");
-            dude1.playMusic(secondSong);
+            //dude plays music as premium:
+            dude.playMusic(secondSong);
 
         } catch (InvalidOperationException e) {
-            System.out.println("Exception: " + e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 }

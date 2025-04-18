@@ -14,7 +14,7 @@ public class Music {
     }
 
     void play(Music music){
-        System.out.println("you are streaming "+music+" right now.");
+        System.out.println("you are streaming "+music.title+" from "+music.singer.username+" right now.");
         ++music.numberOfStream;
     }
 

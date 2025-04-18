@@ -30,7 +30,7 @@ public class Playlist {
     }
 
     public void addMusic(String password, Music newMusic) throws InvalidOperationException{
-        boolean processSucceeded = false;
+        boolean processSucceedNot = true;
         boolean toCheck = true;
         for (User u : allUsers){
             if (u.password.equals(password)){
@@ -40,17 +40,17 @@ public class Playlist {
                     }
                 }
                 playlist.add(newMusic);
-                processSucceeded = true;
+                processSucceedNot = false;
                 break;
             }
         }
-        if (processSucceeded){
+        if (processSucceedNot){
             throw new InvalidOperationException("this password is wrong.");
         }
     }
 
     void removeMusic(String password , Music music) throws InvalidOperationException{
-        boolean processSucceeded = false;
+        boolean processSucceedNot = true;
         boolean toCheck = true;
         for (User u : allUsers){
             if (u.password.equals(password)){
@@ -64,11 +64,11 @@ public class Playlist {
                 if (!(toCheck)){
                     throw new InvalidOperationException("this music does not exist.");
                 }
-                processSucceeded = true;
+                processSucceedNot = false;
                 break;
             }
         }
-        if (processSucceeded){
+        if (processSucceedNot){
             throw new InvalidOperationException("this password is wrong.");
         }
     }
