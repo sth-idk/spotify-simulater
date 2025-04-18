@@ -5,7 +5,9 @@ public class RegularBehavior implements UserBehavior{
 
     @Override
     public void createPlaylist(String Title, User Owner) throws InvalidOperationException {
+
         throw new InvalidOperationException("get premium and create your favourite playlists.");
+
     }
 
     @Override
