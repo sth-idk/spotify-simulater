@@ -15,9 +15,14 @@ public class Main {
             Music secondSong = new Music(GracieAbrams , "I Told You Things");
             Music.allMusics.add(secondSong);
 
+            
+            
+            //dude plays music as regular:
+            for (int i = 0; i < 5; i++) {
+                dude.playMusic(firstSong);
+            }
 
-
-
+            
             //dude buys premium for 2 months:
             dude.buyPremium(dude, 2);
 
@@ -33,6 +38,10 @@ public class Main {
             //dude plays music as premium:
             dude.playMusic(secondSong);
 
+            //dude plays playlist as premium
+            dudePlaylist.playPlaylist(dudePlaylist);
+
+            
         } catch (InvalidOperationException e) {
             System.out.println(e.getMessage());
         }
