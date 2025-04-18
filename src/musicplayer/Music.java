@@ -22,4 +22,13 @@ public class Music {
         }
         return null;
     }
+
+    Music search(String title , User singer){
+        for (Music m : allMusics){
+            if (m.title.equalsIgnoreCase(title) && m.singer == singer){
+                return m;
+            }
+        }
+        return null;
+    }
 }
