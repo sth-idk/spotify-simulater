@@ -4,4 +4,5 @@ import java.util.ArrayList;
 
 public class Playlist {
     ArrayList<Music> playlist = new ArrayList<>();
+    User owner;
 }
