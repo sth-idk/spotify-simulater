@@ -5,8 +5,13 @@ import java.util.ArrayList;
 public class User {
     String username;
     String password;
-    static ArrayList<User> followerList = new ArrayList<>();
-    static ArrayList<User> followingList = new ArrayList<>();
+    ArrayList<User> followerList = new ArrayList<>();
+    ArrayList<User> followingList = new ArrayList<>();
     UserBehavior behavior;
     ArrayList<Playlist> playlists = new ArrayList<>();
+    static ArrayList<User> allUsers = new ArrayList<>();
+
+    void follow(User user){
+        followingList.add(user);
+    }
 }
