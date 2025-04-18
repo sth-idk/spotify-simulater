@@ -22,5 +22,17 @@ public class Playlist {
         }
     }
 
-
+    void addMusic(String password , Music newMusic){
+        boolean toCheck = true;
+        for (User u : allUsers){
+            if (u.password.equals(password)){
+                playlist.add(newMusic);
+                toCheck = false;
+                break;
+            }
+        }
+        if (!(toCheck)){
+            throw new InvalidOperationException("this password is wrong.");
+        }
+    }
 }
