@@ -12,4 +12,14 @@ public class Music {
         System.out.println("you are streaming "+music+" right now.");
         ++music.numberOfStream;
     }
+
+    Music search(Music music){
+        boolean toCheck = true;
+        for (Music m : allMusics){
+            if (m == music){
+                return m;
+            }
+        }
+        return null;
+    }
 }
