@@ -8,6 +8,10 @@ public class Playlist {
     ArrayList<Music> playlist = new ArrayList<>();
     User owner;
 
+    public Playlist(User owner){
+        this.owner = owner;
+    }
+
     void editTitle(String password , Music music , String newTitle) throws InvalidOperationException{
         boolean toCheck = true;
         for (User u : allUsers){

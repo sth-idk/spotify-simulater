@@ -9,7 +9,7 @@ public class PremiumBehavior implements UserBehavior{
 
     @Override
     public void createPlaylist(String Title, User Owner) {
-
+        Playlist playlist = new Playlist();
     }
 
     @Override
