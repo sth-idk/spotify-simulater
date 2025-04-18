@@ -35,4 +35,28 @@ public class Playlist {
             throw new InvalidOperationException("this password is wrong.");
         }
     }
+
+    void removeMusic(String password , Music music){
+        boolean processSucceeded = false;
+        boolean toCheck = true;
+        for (User u : allUsers){
+            if (u.password.equals(password)){
+                for (Music m : playlist){
+                    if (m == music){
+                        playlist.remove(m);
+                        toCheck = false;
+                        break;
+                    }
+                }
+                if (!(toCheck)){
+                    throw new InvalidOperationException("this music does not exist.");
+                }
+                processSucceeded = true;
+                break;
+            }
+        }
+        if (processSucceeded){
+            throw new InvalidOperationException("this password is wrong.");
+        }
+    }
 }
