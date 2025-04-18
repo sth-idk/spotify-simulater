@@ -7,9 +7,12 @@ import static musicplayer.User.allUsers;
 public class Playlist {
     ArrayList<Music> playlist = new ArrayList<>();
     User owner;
+    String title;
 
-    public Playlist(User owner){
+
+    public Playlist(User owner , String title){
         this.owner = owner;
+        this.title = title;
     }
 
     void editTitle(String password , Music music , String newTitle) throws InvalidOperationException{
