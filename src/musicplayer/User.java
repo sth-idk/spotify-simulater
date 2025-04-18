@@ -14,4 +14,8 @@ public class User {
     void follow(User user){
         followingList.add(user);
     }
+
+    void createPlaylist(String title , User owner){
+        this.behavior.createPlaylist(title, owner);
+    }
 }
