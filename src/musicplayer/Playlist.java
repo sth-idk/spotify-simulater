@@ -23,15 +23,21 @@ public class Playlist {
     }
 
     void addMusic(String password , Music newMusic){
+        boolean processSucceeded = false;
         boolean toCheck = true;
         for (User u : allUsers){
             if (u.password.equals(password)){
+                for (Music m : playlist){
+                    if (m == newMusic){
+                        throw new InvalidOperationException("this music already exists.");
+                    }
+                }
                 playlist.add(newMusic);
-                toCheck = false;
+                processSucceeded = true;
                 break;
             }
         }
-        if (!(toCheck)){
+        if (processSucceeded){
             throw new InvalidOperationException("this password is wrong.");
         }
     }
