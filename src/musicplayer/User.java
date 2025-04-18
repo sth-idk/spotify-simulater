@@ -18,4 +18,8 @@ public class User {
     void createPlaylist(String title , User owner){
         this.behavior.createPlaylist(title, owner);
     }
+
+    void playMusic(Music music){
+        this.behavior.playMusic(music);
+    }
 }
