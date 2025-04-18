@@ -8,6 +8,11 @@ public class Music {
     int numberOfStream = 0;
     static ArrayList<Music> allMusics = new ArrayList<>();
 
+    public Music(User singer , String title){
+        this.singer = singer;
+        this.title = title;
+    }
+
     void play(Music music){
         System.out.println("you are streaming "+music+" right now.");
         ++music.numberOfStream;
