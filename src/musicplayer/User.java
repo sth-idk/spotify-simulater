@@ -7,4 +7,5 @@ public class User {
     String password;
     static ArrayList<User> followerList = new ArrayList<>();
     static ArrayList<User> followingList = new ArrayList<>();
+    UserBehavior behavior;
 }
