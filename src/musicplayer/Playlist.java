@@ -29,7 +29,7 @@ public class Playlist {
         }
     }
 
-    void addMusic(String password , Music newMusic) throws InvalidOperationException{
+    public void addMusic(String password, Music newMusic) throws InvalidOperationException{
         boolean processSucceeded = false;
         boolean toCheck = true;
         for (User u : allUsers){
