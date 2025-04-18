@@ -1,6 +1,7 @@
 package musicplayer;
 
 public class PremiumBehavior implements UserBehavior{
+    int month;
     @Override
     public void createPlaylist(String Title, User Owner) {
 
