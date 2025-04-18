@@ -8,7 +8,7 @@ public class Playlist {
     ArrayList<Music> playlist = new ArrayList<>();
     User owner;
 
-    void editTitle(String password , Music music , String newTitle){
+    void editTitle(String password , Music music , String newTitle) throws InvalidOperationException{
         boolean toCheck = true;
         for (User u : allUsers){
             if (u.password.equals(password)){
@@ -22,7 +22,7 @@ public class Playlist {
         }
     }
 
-    void addMusic(String password , Music newMusic){
+    void addMusic(String password , Music newMusic) throws InvalidOperationException{
         boolean processSucceeded = false;
         boolean toCheck = true;
         for (User u : allUsers){
@@ -42,7 +42,7 @@ public class Playlist {
         }
     }
 
-    void removeMusic(String password , Music music){
+    void removeMusic(String password , Music music) throws InvalidOperationException{
         boolean processSucceeded = false;
         boolean toCheck = true;
         for (User u : allUsers){

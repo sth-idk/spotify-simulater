@@ -11,12 +11,18 @@ public class RegularBehavior implements UserBehavior{
     }
 
     @Override
-    public void playMusic(Music music) {
-
+    public void playMusic(Music music) throws InvalidOperationException {
+        if (playingLimit > 0) {
+            music.play(music);
+            playingLimit--;
+        }
+        if (playingLimit == 0)
+            throw new InvalidOperationException("you have reached the playing limit.");
     }
 
     @Override
     public void buyPremium(User owner, int month) {
+
 
     }
 }
