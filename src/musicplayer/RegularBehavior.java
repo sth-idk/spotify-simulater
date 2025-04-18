@@ -22,7 +22,7 @@ public class RegularBehavior implements UserBehavior{
 
     @Override
     public void buyPremium(User owner, int month) {
-
+        owner.behavior = new PremiumBehavior(month);
 
     }
 }
